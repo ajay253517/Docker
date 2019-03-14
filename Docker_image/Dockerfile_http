@@ -1,0 +1,9 @@
+#Web server using centos with volume
+FROM centos:7
+RUN yum install -y httpd
+VOLUME /var/www/html
+COPY index.html /var/www/html/
+EXPOSE 80
+ADD run-httpd.sh /run-httpd.sh
+RUN chmod -v +x /run-httpd.sh
+CMD ["/run-httpd.sh"]
