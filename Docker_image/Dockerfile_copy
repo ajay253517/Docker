@@ -1,6 +1,0 @@
-#Image with simple command
-FROM alpine
-MAINTAINER ajay
-RUN apk add bash
-COPY index.html /usr/local/
-

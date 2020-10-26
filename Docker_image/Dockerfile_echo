@@ -1,4 +1,0 @@
-FROM alpine
-MAINTAINER ajay
-RUN apk add bash
-CMD ["echo", "My-First-image"] 
