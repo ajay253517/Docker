@@ -1,0 +1,4 @@
+FROM alpine
+ARG ver
+ENV ver v1.1
+CMD env 

@@ -1,0 +1,2 @@
+FROM busybox
+CMD echo "example running from latest image"

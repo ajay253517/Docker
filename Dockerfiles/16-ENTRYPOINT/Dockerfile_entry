@@ -1,0 +1,4 @@
+#Docker file to show the ENTRYPOINT
+FROM alpine:latest
+ENTRYPOINT ["/bin/ls", "/var"]
+CMD ["home"]

@@ -1,0 +1,6 @@
+FROM centos:7
+RUN useradd ansible
+RUN yum update -y ; yum install -y sudo ; /bin/sh -c 'echo ansible:root123 | chpasswd'
+RUN sed -i '101i anisble ALL=(ALL) NOPASSWD:ALL' /etc/sudoers
+USER ansible:ansible
+CMD ["echo" , "Ansible user created with password root123!!!"]

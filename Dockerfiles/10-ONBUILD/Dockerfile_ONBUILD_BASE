@@ -1,0 +1,10 @@
+FROM centos:7
+RUN mkdir -p /opt/scripts
+WORKDIR /opt/scripts
+RUN echo "ping -c4 www.google.com" > test-ping.sh \
+    && echo "uptime" > uptime.sh \
+    && echo "date" > date.sh 
+ONBUILD ENTRYPOINT sh /opt/scripts/test-ping.sh \
+    && sh /opt/scripts/uptime.sh \
+    && sh /opt/scripts/date.sh
+

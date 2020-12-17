@@ -1,0 +1,8 @@
+FROM alpine:3.8
+RUN adduser -D myuser
+USER myuser
+RUN touch /tmp/log.txt 
+USER 0
+RUN ls -l /tmp/log.txt > /tmp/log.txt
+CMD sleep 1000
+

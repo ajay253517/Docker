@@ -1,0 +1,4 @@
+FROM alpine
+COPY health.zip /tmp/
+ADD health  index.html /tmp/
+COPY health index.html /var/

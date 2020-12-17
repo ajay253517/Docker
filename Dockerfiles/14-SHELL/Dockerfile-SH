@@ -1,0 +1,5 @@
+FROM  alpine
+RUN apk add zsh
+COPY ex_zsh.sh /opt/
+SHELL ["zsh","/opt/ex_zsh.sh"]
+CMD echo "print shell op"

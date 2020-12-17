@@ -1,0 +1,7 @@
+FROM centos/httpd
+LABEL EXAMPLE = "COPY"
+COPY health      /tmp/health
+COPY index.html  /tmp/html/my.html
+COPY *.sh        /tmp/shell-script/
+COPY *file*      /tmp/dockerfiles/
+RUN ls -Rlr /tmp/

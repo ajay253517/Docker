@@ -1,0 +1,6 @@
+#Appilication deployment using tomcat 
+FROM tomcat:7
+RUN wget -O /usr/local/tomcat/webapps/hcm.3.1.4.war https://sourceforge.net/projects/obhrms/files/hcm.3.1.4.war 
+EXPOSE 8080
+CMD ["bin/catalina.sh","run"]
+

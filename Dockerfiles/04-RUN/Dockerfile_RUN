@@ -1,0 +1,12 @@
+FROM  ubuntu:18.04
+
+WORKDIR /tmp
+
+RUN apt-get update &&  \ 
+    apt-get install git -yq && \ 
+    git clone https://gitlab.com/ajay253517/shell-scripts.git && \
+    chmod -R 755 /tmp/shell-scripts
+
+RUN ["/tmp/shell-scripts/scripts/basic_scripts/echo_usage.sh"]
+
+RUN [ "echo", "$HOME" ] 

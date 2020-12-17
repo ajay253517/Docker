@@ -1,0 +1,5 @@
+FROM busybox
+#RUN  echo $HOME
+RUN ["/bin/echo" , "$HOME"]
+CMD  ["/bin/echo", "Runing run in shell from print $HOME"]
+

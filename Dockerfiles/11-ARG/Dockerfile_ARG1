@@ -1,0 +1,4 @@
+FROM alpine
+ARG ver=3
+ENV app_ver=${ver}
+CMD env 

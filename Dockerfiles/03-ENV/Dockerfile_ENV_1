@@ -1,0 +1,7 @@
+FROM alpine
+RUN mkdir -p /opt/app
+ENV VERSION 1.10
+ENV release_env="PROD ENV"
+ENV COST_CODE = PROD \ RELEASE 
+ENV PATH="${PATH}:/opt/app"
+CMD env

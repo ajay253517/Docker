@@ -1,0 +1,5 @@
+FROM alpine
+COPY Dockerfile /tmp/Dockerfile
+COPY health/    /tmp/health/
+COPY *file*      /tmp/dockerfiles/
+CMD ls -l /tmp/

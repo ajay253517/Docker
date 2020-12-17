@@ -1,0 +1,2 @@
+FROM busybox@sha256:2131f09e4044327fd101ca1fd4043e6f3ad921ae7ee901e9142e6e36b354a907
+CMD echo "Built using image digest"

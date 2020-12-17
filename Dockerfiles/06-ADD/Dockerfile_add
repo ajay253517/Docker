@@ -1,0 +1,5 @@
+FROM alpine:latest
+WORKDIR /test
+ADD ./test_dir dcfiles/
+ADD Dockerfile_* ./  
+CMD echo "Available files in WORKDIR are `ls *`"

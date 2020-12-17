@@ -1,0 +1,9 @@
+FROM alpine
+ARG TARGETOS 
+ARG TARGETARCH  
+ARG TARGETPLATFORM
+
+RUN echo -e "Printing In built arguments \n  TARGETOS value is $TARGETOS \n TARGETARCH value is $TARGETARCH \n TARGETPLATFORM value is $TARGETPLATFORM \n" > /tmp/arg.txt
+
+CMD cat /tmp/arg.txt
+

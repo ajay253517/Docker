@@ -1,0 +1,4 @@
+FROM alpine
+COPY sig-test.sh /opt/scripts/
+HEALTHCHECK CMD ps aux | grep sig-test.sh > /dev/null 2>&1 || echo "Running" || echo "failed"
+ENTRYPOINT sh /opt/scripts/sig-test.sh

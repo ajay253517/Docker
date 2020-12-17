@@ -1,0 +1,3 @@
+FROM apline
+LABEL EXAMPLE = "COPY"
+COPY  run-httpd.sh /tmp/

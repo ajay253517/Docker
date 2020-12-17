@@ -1,0 +1,6 @@
+FROM alpine:3.12
+RUN mkdir /new_dir
+WORKDIR /new_dir
+WORKDIR N1
+WORKDIR N2
+CMD pwd

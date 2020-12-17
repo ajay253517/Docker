@@ -1,0 +1,18 @@
+#Download code
+FROM alpine as download_code
+RUN apk add git && mkdir /app &&  git clone https://github.com/katacoda/golang-http-server.git && \
+     cp -Rvf golang-http-server/* app/
+
+# Compile Stage
+FROM golang:1.6-alpine as compile
+COPY --from=download_code /app /app/
+RUN ls -l /app
+WORKDIR /app
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
+
+# Final Stage
+FROM alpine
+EXPOSE 80
+CMD ["/app"]
+# Copy from Compile stage
+COPY --from=compile /app/main /app
